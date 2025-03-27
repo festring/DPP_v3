@@ -1,0 +1,245 @@
+/* Body 기본 스타일 */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #cfeff5;
+}
+
+/* 공통 버튼 스타일 */
+button,
+.button {
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #555;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.3s ease;
+}
+
+button:hover,
+.button:hover {
+  background-color: #f7f7f7;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 공통 박스 스타일 */
+.glass-container,
+.dpp-card,
+.log-entry,
+.create-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.glass-container {
+  background: #FEF7EE;
+  max-width: 500px;
+  margin-top: 100px;
+}
+
+.dpp-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 350px;
+  overflow: hidden; /* 전체 카드에는 스크롤 숨김 */
+  position: relative;
+  text-align: left;
+  word-wrap: break-word;
+}
+.dpp-content {
+  padding: 16px;
+  overflow-y: auto; /* 콘텐츠 영역에만 스크롤 적용 */
+  max-height: 250px; /* 콘텐츠 영역 높이 제한 */
+}
+.dpp-actions {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.create-section {
+  border-radius: 20px;
+  background-color: #f3f3f3;
+  width: 60%;
+  margin-top: 20px;
+  text-align: right; /* Create DPP 버튼 오른쪽 정렬 */
+}
+
+.log-entry {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* 텍스트 스타일 */
+h1, h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 120px; /* app-header 아래 여백 추가 */
+  font-weight: normal;
+  z-index: 1; /* 다른 요소보다 위로 표시 */
+  position: relative;
+}
+
+.welcome-section h2,
+.user-status {
+  text-align: center;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.contact-title {
+  font-weight: bold;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.account-info p {
+  font-weight: bold;
+}
+
+.account-info span {
+  display: block;
+  font-family: monospace;
+}
+
+/* 공통 레이아웃 스타일 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fccfd6;
+  color: rgb(68, 68, 68);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 32px;
+  z-index: 1000;
+}
+
+/* DPP Gallery */
+.dpp-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  justify-content: flex-start; /* 상단 배치 */
+  margin-top: 20px;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+/* 편집 폼 */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Form 요소 스타일 */
+.create-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* form 요소 가운데 정렬 */
+  gap: 10px; /* input 간 간격 */
+}
+
+.create-section form input {
+  width: 50%; /* 가로 길이 조정 */
+  height: 15px; /* 세로 길이 약간 증가 */
+  padding: 5px;
+  font-size: 12px; /* 글씨 크기 약간 조정 */
+}
+
+/* 중앙 정렬 */
+.log-button-container,
+.modal-content h3,
+.modal-content .close-button {
+  text-align: center;
+}
+
+/* close-button 스타일 */
+.close-button {
+  display: block;
+  margin: 0 auto 15px; /* 가운데 정렬 및 하단 여백 */
+}
+
+/* 스크롤과 텍스트 정리 */
+.contact-info div {
+  flex: 1;
+}
+
+.contact-info:not(:last-child)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.log-entry p {
+  margin: 0;
+}
+
+.log-entry pre {
+  margin-top: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.pt-button {
+  text-align: left;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  background-color: #ffd1a1; /* 필요시 색상 추가 */
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
